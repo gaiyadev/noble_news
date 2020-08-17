@@ -10,9 +10,15 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dialy News'),
+        backgroundColor: Colors.redAccent,
+        title: Text(
+          'Noble News',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
-      body: Text('lastest news her'),
+      body: Text('latest news here'),
     );
   }
 }

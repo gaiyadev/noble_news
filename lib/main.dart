@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/home.dart';
+import 'home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(NewsApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class NewsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData().copyWith(
+        primaryColor: Colors.blue,
+      ),
       home: Home(),
     );
   }
