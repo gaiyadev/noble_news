@@ -1,9 +1,9 @@
-import 'package:news_app/models/news_article.dart';
+import 'package:news_app/models/newsArticle.dart';
 
-class NewArticleViewModel {
+class NewsArticleViewModel {
   NewsArticle _newsArticle;
 
-  NewArticleViewModel({NewsArticle article}) : _newsArticle = article;
+  NewsArticleViewModel({NewsArticle article}) : _newsArticle = article;
 
   String get title {
     return _newsArticle.title;
@@ -13,7 +13,7 @@ class NewArticleViewModel {
     return _newsArticle.description;
   }
 
-  String get urlToImage {
+  String get imageURL {
     return _newsArticle.urlToImage;
   }
 

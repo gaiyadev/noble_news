@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:news_app/pages/newsListPage.dart';
+import 'package:news_app/viewmodels/newsArticleListViewModel.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(NewsApp());
+void main() => runApp(App());
 
-class NewsApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData().copyWith(
-        primaryColor: Colors.blue,
+      title: "Fresh News",
+      home: ChangeNotifierProvider(
+        builder: (_) => NewsArticleListViewModel(),
+        child: NewsListPage(),
       ),
-      home: Home(),
     );
   }
 }
