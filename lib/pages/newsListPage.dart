@@ -38,12 +38,13 @@ class _NewsListPageState extends State<NewsListPage> {
         return Align(child: Text("No results found!"));
       case LoadingStatus.completed:
         return Expanded(
-            child: NewsList(
-          articles: vm.articles,
-          onSelected: (article) {
-            _showNewsArticleDetails(context, article);
-          },
-        ));
+          child: NewsList(
+            articles: vm.articles,
+            onSelected: (article) {
+              _showNewsArticleDetails(context, article);
+            },
+          ),
+        );
     }
   }
 

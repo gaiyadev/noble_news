@@ -9,9 +9,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Fresh News",
+      title: "Noble News",
       home: ChangeNotifierProvider(
-        builder: (_) => NewsArticleListViewModel(),
+        create: (_) =>
+            new NewsArticleListViewModel(), //        builder: (_) => NewsArticleListViewModel(),
         child: NewsListPage(),
       ),
     );
