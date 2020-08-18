@@ -11,8 +11,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "Noble News",
       home: ChangeNotifierProvider(
-        create: (_) =>
-            new NewsArticleListViewModel(), //        builder: (_) => NewsArticleListViewModel(),
+        builder: (_) => NewsArticleListViewModel(),
         child: NewsListPage(),
       ),
     );
